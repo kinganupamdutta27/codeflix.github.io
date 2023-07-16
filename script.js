@@ -73,7 +73,7 @@ return formattedDateTime;
 }
 
 /*----Alert-----*/
-setInterval(()=>{
+let x = setTimeout(()=>{
   document.getElementById('alert1').setAttribute('hidden', 'true')
   console.log("Alert Closed")
 },15000)
