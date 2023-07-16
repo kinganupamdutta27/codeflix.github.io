@@ -1,0 +1,115 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+body{
+  padding: 0 !important;
+  margin: 0 !important;
+  background-color: #111218 !important;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+.card-body {
+    margin-top: 2px;
+  margin-bottom: 2px;
+   border-radius: 5%;
+}
+#div1 {
+  justify-content: center; 
+}
+/*-------------Title of the site-----nav bar-----------*/
+#names1{
+  
+  margin: 1px auto;
+  text-align: center;
+  color: white;
+  font-size: 3em;
+  transition: 0.5s;
+  font-family: Arial, Helvetica, sans-serif;
+  
+}
+#names1:hover {
+  text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc,
+    0 3px 0 #ccc, 0 4px 0 #ccc,
+    0 5px 0 #ccc, 0 6px 0 #ccc,
+    0 7px 0 #ccc, 0 8px 0 #ccc,
+    0 9px 0 #ccc, 0 10px 0 #ccc,
+    0 11px 0 #ccc, 0 12px 0 #ccc,
+    0 20px 30px rgba(0, 0, 0, 0.5);
+}
+/*---------nav icon-------------------------*/
+#navicon{
+  width: auto;
+  height: 64px;
+  border-radius: 15px;
+  
+}
+/* Heart Icon
+--------------------------------------------- */
+.soc{
+  margin: 5px 5px;
+  padding: 5px 5px;
+  height:54px;
+  width:auto;
+  border: 1px solid #000019;
+  border-radius: 15px;
+}
+.soc:hover{
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+.soc:focus,.soc:active{
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+.footer {
+  background-color: #f8f9fa;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.heart {
+  color: red;
+}
+
+.social-media {
+  margin-top: 10px;
+}
+
+.social-media a {
+  display: inline-block;
+  margin-right: 10px;
+  color: #777;
+  font-size: 20px;
+}
+
+.copy {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #777;
+}
+/*----------------------------*/
+
+
+.card:hover{
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset !important;
+}
+.ns:hover{
+  box-shadow: rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px, rgba(240, 46, 170, 0.2) 0px 15px, rgba(240, 46, 170, 0.1) 0px 20px, rgba(240, 46, 170, 0.05) 0px 25px !important;
+}
+.nn:hover{
+  background-color: black !important;
+  font-weight: bold !important;
+}
+.copy {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #777;
+}
+#carouselExampleAutoplaying{
+  margin-top: 2px !important;
+}
