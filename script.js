@@ -94,3 +94,8 @@ function countdown() {
 }
 
 countdown();
+
+/*--------Prevent Context Menu Right Click --------------*/
+document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+});
