@@ -72,3 +72,25 @@ const formattedDateTime = `${formattedDate} at ${formattedTime}`;
 return formattedDateTime;
 }
 
+/*----Alert-----*/
+setInterval(()=>{
+  document.getElementById('alert1').setAttribute('hidden', 'true')
+  console.log("Alert Closed")
+},15000)
+//alert.close()
+function countdown() {
+  var count = 15;
+  var countdownElement = document.getElementById('countdown');
+
+  var timer = setInterval(function () {
+    countdownElement.innerHTML = `Close in Just <b style="text-align: center; align-items: center; justify-content: center;">${count}</b> Seconds`;
+    count--;
+
+    if (count < 0) {
+      clearInterval(timer);
+      countdownElement.textContent = 'Countdown is finished!';
+    }
+  }, 1000);
+}
+
+countdown();

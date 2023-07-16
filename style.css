@@ -113,3 +113,7 @@ body{
 #carouselExampleAutoplaying{
   margin-top: 2px !important;
 }
+#alert1{
+  margin-top: 15px;
+  border-radius: 30px;
+}
