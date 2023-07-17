@@ -44,8 +44,7 @@ body{
   border-radius: 15px;
   
 }
-/* Heart Icon
---------------------------------------------- */
+/*-------------- Heart Icon & Social Media and Email footer----------------------------- */
 .soc{
   margin: 5px 5px;
   padding: 5px 5px;
@@ -86,13 +85,13 @@ body{
   color: #777;
   font-size: 20px;
 }
-
+/*--------------only Card Design------------------------*/
 .copy {
   margin-top: 10px;
   font-size: 14px;
   color: #777;
 }
-/*----------------------------*/
+/*------------Card Hover design------------------*/
 
 
 .card:hover{
@@ -101,10 +100,13 @@ body{
 .ns:hover{
   box-shadow: rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px, rgba(240, 46, 170, 0.2) 0px 15px, rgba(240, 46, 170, 0.1) 0px 20px, rgba(240, 46, 170, 0.05) 0px 25px !important;
 }
-.nn:hover{
+/*-----Nav bar Button Hover Style Old------------------
+.nn:hover,.nn:focus,.nn:active{
   background-color: black !important;
   font-weight: bold !important;
+  border-radius: 15px !important;
 }
+-------------------------------------------------*/
 .copy {
   margin-top: 10px;
   font-size: 14px;
@@ -116,4 +118,52 @@ body{
 #alert1{
   margin-top: 15px;
   border-radius: 30px;
+}
+
+/*-----------------New Button Style Nav Bar only------------------------*/
+
+/* CSS */
+.nn {
+  appearance: none !important;
+  background-color: #0a0b0c !important;
+  border: 2px solid #000000 !important;
+  border-radius: 20px !important;
+  box-sizing: border-box !important;
+  color: #FFFFFF !important;
+  cursor: pointer !important;
+  display: inline-block !important;
+  font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  line-height: normal !important;
+  
+  min-height: 15px !important;
+  min-width: 0 !important;
+  outline: none !important;
+  margin: 0px 2px !important;
+  padding: 10px 2px !important;
+  text-align: center !important;
+  text-decoration: none !important;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1) !important;
+  user-select: none !important;
+  -webkit-user-select: none !important;
+  touch-action: manipulation !important;
+  width: 80px !important;
+  will-change: transform !important;
+}
+
+.nn:disabled {
+  pointer-events: none !important;
+}
+
+.nn:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px !important;
+  transform: translateY(-2px) !important;
+  border-color: #ccc !important;
+}
+
+.nn:active,.nn:focus {
+  box-shadow: none !important;
+  transform: translateY(0) !important;
+  border-color: #c300ff !important;
 }

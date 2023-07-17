@@ -99,3 +99,8 @@ countdown();
 document.addEventListener('contextmenu', function(e) {
     e.preventDefault();
 });
+/*------------Copy Right Auto Year---------------------------------*/
+const d = new Date();
+let yr = d.getFullYear();
+console.log(yr)
+document.getElementById('spyr').textContent = yr
