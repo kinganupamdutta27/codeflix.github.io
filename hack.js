@@ -1,7 +1,7 @@
-/*--------Prevent Context Menu Right Click --------------*/
+/*--------Prevent Context Menu Right Click --------------
 document.addEventListener('contextmenu', function (e) {
     e.preventDefault();
-});
+});*/
 const Message = [
     "This Server Is Hacked<hr>",
     "Initializing hack tool.........................................................",
@@ -44,7 +44,7 @@ setTimeout(async()=>{
     console.log(doc.removeAttribute('hidden'))
     await loopfun(Message);
     let ipa = await ip();
-    //console.log(ipa)
+    console.log(ipa)
     innh += `<table>
     <tr>
         <th>Content</th>
