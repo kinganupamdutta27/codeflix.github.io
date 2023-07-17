@@ -1,7 +1,7 @@
-/*--------Prevent Context Menu Right Click --------------
+/*--------Prevent Context Menu Right Click --------------*/
 document.addEventListener('contextmenu', function (e) {
     e.preventDefault();
-});*/
+});
 const Message = [
     "This Server Is Hacked<hr>",
     "Initializing hack tool.........................................................",
@@ -55,12 +55,16 @@ setTimeout(async()=>{
         <td><b>${ipa.ip}</b></td>
     </tr>
     <tr>
+        <td>Your Internet Service Provider's ASN ID is</td>
+        <td><b>${ipa.connection.asn}</b></td>
+    </tr>
+    <tr>
         <td>Your Internet Service Provider is</td>
-        <td><b>${ipa.as}</b></td>
+        <td><b>${ipa.connection.isp}</b></td>
     </tr>
     <tr>
         <td>Your Location Country is</td>
-        <td><b>${ipa.country}</b></td>
+        <td><b>${ipa.countryName} ${ipa.location.native_name}</b></td>
     </tr>
     <tr>
         <td>Your Location State is</td>
@@ -69,13 +73,13 @@ setTimeout(async()=>{
    
     <tr>
         <td>Your Location City is</td>
-        <td><b>${ipa.city}</b></td>
+        <td><b>${ipa.cityName}</b></td>
     </tr>
     <tr>
         <td>Your Location TimeZone is</td>
-        <td><b>${ipa.timezone}</b></td>
+        <td><b>${ipa.timeZone}</b></td>
     </tr>
-    <tr>
+    <tr hidden>
         <td>Your ISP Co-org Name is</td>
         <td><b>${ipa.org}</b></td>
     </tr>
@@ -85,13 +89,33 @@ setTimeout(async()=>{
 
 const ip = async () =>{
     const resolve = await fetch('https://api.ipify.org?format=json')
-    const resolve2 = await fetch('http://ip-api.com/json/')
-    const data2 = await resolve2.json();
+    //const resolve2 = await fetch('http://ip-api.com/json/')
+    //const data2 = await resolve2.json();
     const data = await resolve.json();
-    const concatenatedObj = Object.assign(data,data2);
+    const data3 = await ip2(data.ip)
+    
+    const concatenatedObj = Object.assign(data,data3);
+    console.log(concatenatedObj)
     return concatenatedObj;
 }
+const ip2 = async(ipad)=>{
+    let myHeaders = new Headers();
+    myHeaders.append("apikey", "nQtOlCAodWZxhphHNNX1Q1tBn7T4uHx2");
 
+    let requestOptions = {
+        method: 'GET',
+        redirect: 'follow',
+        headers: myHeaders
+    };
+    console.log(requestOptions)
+    const resolve = await fetch(`https://freeipapi.com/api/json/${ipad}`)
+    const data = await resolve.json();
+    const resolve2 = await fetch(`https://api.apilayer.com/ip_to_location/${ipad}`, requestOptions)
+    const data2_2 = await resolve2.json();
+    const concatenatedObj = Object.assign(data, data2_2);
+    //console.log(concatenatedObj.connection.isp)
+    return concatenatedObj
+}
 /*fetch('https://api.ipify.org?format=json')
     .then(response => response.json())
     .then(data => {
