@@ -78,22 +78,71 @@ let x = setTimeout(()=>{
   console.log("Alert Closed")
 },15000)
 //alert.close()
-function countdown() {
-  var count = 15;
-  var countdownElement = document.getElementById('countdown');
+class CountDown {
+  countdown(sec1,id) {
+    var count = sec1;
+    var countdownElement = document.getElementById(id);
 
-  var timer = setInterval(function () {
+    var timer = setInterval(function () {
     countdownElement.innerHTML = `Close in Just <b style="text-align: center; align-items: center; justify-content: center;">${count}</b> Seconds`;
     count--;
 
     if (count < 0) {
       clearInterval(timer);
       countdownElement.textContent = 'Countdown is finished!';
+      countdownElement.setAttribute('hidden', 'true');
     }
   }, 1000);
 }
 
-countdown();
+
+  countdown2(sec1, id) {
+    var count = sec1;
+    var countdownElement = document.getElementById(id);
+
+    var timer = setInterval(function () {
+      countdownElement.innerHTML = `<b style="text-align: center; align-items: center; justify-content: center; color: white;">${count}</b> Seconds`;
+      count--;
+
+      if (count < 0) {
+        clearInterval(timer);
+        countdownElement.textContent = 'Countdown is finished!';
+        //countdownElement.setAttribute('hidden', 'true');
+      }
+    }, 1000);
+  }
+}
+
+const coundown_alertbox = new CountDown();
+coundown_alertbox.countdown(15, 'countdown');
+
+
+
+/*--------------Job API In Process ----------------*/
+const jobapi = async() =>{
+  const div2 = document.getElementById('div2')
+  try{
+    const responce = await fetch('https://meowfacts.herokuapp.com/')
+    console.log(responce.ok)
+    const data = await responce.json();
+    //console.log(data.data[0])
+    //coundown_alertbox.countdown2(15, 'pt');
+    div2.innerHTML = `<div class="card">
+      <h5 class="card-header">Featured</h5>
+      <div class="card-body">
+        <p class="card-text">${data.data[0]}</p>
+        <hr>
+      </div>
+    </div>`
+
+  }catch(error){
+    console.error(error);
+  }
+ 
+}
+setInterval(()=>{
+  jobapi()
+},15000)
 
 /*--------Prevent Context Menu Right Click --------------*/
 document.addEventListener('contextmenu', function(e) {
