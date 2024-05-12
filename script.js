@@ -144,10 +144,10 @@ setInterval(()=>{
   jobapi()
 },15000)
 
-/*--------Prevent Context Menu Right Click --------------*/
+/*--------Prevent Context Menu Right Click --------------
 document.addEventListener('contextmenu', function(e) {
     e.preventDefault();
-});
+});*/
 /*------------Copy Right Auto Year---------------------------------*/
 const d = new Date();
 let yr = d.getFullYear();
